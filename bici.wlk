@@ -7,6 +7,7 @@ class Bici {
   method altura() = rodado * 2.5 + 15
   method velocidad() = if(largo > 120) rodado + 6 else rodado + 2
   method marca() = marca
+  method cantAccesorios() = accesorios.size()
   method cantAccesoriosLivianos() = accesorios.count({a => a.peso() < 1})
   method carga() = accesorios.sum({a => a.carga()})
   method peso() = rodado / 2 + accesorios.sum({a => a.peso()})
